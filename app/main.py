@@ -14,3 +14,8 @@ app.include_router(tasks.router, prefix="/tasks")
 @app.get("/")
 def status():
     return{"status": "Fine!"}
+
+
+@app.get("/health")
+def health():
+    return{"status": "ok"}
